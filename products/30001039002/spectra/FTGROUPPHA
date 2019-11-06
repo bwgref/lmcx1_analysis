@@ -1,0 +1,5 @@
+ftgrouppha nu30001039002_A_state1_01_sr.pha state1_A_opt.pha opt respfile=nu30001039002_A_state1_01_sr.rmf
+ftgrouppha nu30001039002_B_state1_01_sr.pha state1_B_opt.pha opt respfile=nu30001039002_B_state1_01_sr.rmf
+
+ftgrouppha nu30001039002_A_state2_01_sr.pha state2_A_opt.pha opt respfile=nu30001039002_A_state1_01_sr.rmf
+ftgrouppha nu30001039002_B_state2_01_sr.pha state2_B_opt.pha opt respfile=nu30001039002_B_state1_01_sr.rmf
