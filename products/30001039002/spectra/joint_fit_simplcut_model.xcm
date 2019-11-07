@@ -1,0 +1,18 @@
+@simplcut_model_state2
+
+da 3:3 state1_A_opt.pha 4:4 state1_B_opt.pha
+ignore *:0.-3. 30.-**
+energies 1e-3 1000. 1000 log
+
+newpar 167=224
+untie 224
+newpar 222=(1.0 - 224)*228
+newpar 165=222
+newapr 175=61
+
+fit 1000
+setplot com re y2 0.8 1.2
+setplot rebin 25 1000
+pl ld rat
+
+

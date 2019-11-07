@@ -1,14 +1,20 @@
 statistic cstat
-parallel leven 8
-cpd /xw
+data 1:1 state2_A_opt.pha
 
-setplot energy
+data 2:2 state2_B_opt.pha
+ignore 1:1-9,95-253 2:1-8,97-255
 
-
-da state2_A_opt.pha 2:2 state2_B_opt.pha
-ign *:0.-3. 30.-**
-
-mo TBvarabs(diskbb+nthcomp)
+method leven 1000 0.01
+abund angr
+xsect vern
+cosmo 70 0 0.73
+xset delta 0.01
+systematic 0
+model  gabs*constant*TBvarabs(gaussian + diskbb + nthComp)
+        6.64439       0.05          0          0      1e+06      1e+06
+           0.01       -0.1          0          0         10         20
+        1.77687       0.05          0          0      1e+06      1e+06
+              1       -0.1          0          0      1e+10      1e+10
               1       -0.1          0          0     100000      1e+06
            0.87      -0.01          0          0          1          1
            0.45      -0.01          0          0          1          1
@@ -51,44 +57,71 @@ mo TBvarabs(diskbb+nthcomp)
               1      -0.01          0          0          1          1
               1      -0.01          0          0          1          1
               0      -0.01     -0.999     -0.999         10         10
-            0.6     0.01        0.2         0.2         10.         10.
-            30      0.1         0.          0.          100. 100.
-            2.8     0.05        1.          1.          4.          4. 
-            100. -0.1
-            =43
-            1
-            0. -0.1
-            1e-4
-            /*
-
-fit 1000
-addcomp 1 const 
-1. -0.1
-1.0 0.01 0.8 0.8 1.2. 1.2
-fit 1000
-pl ld rat
-
-setplot com re y2 0.8 1.2
-setplot rebin 25 1000
-pl
-
-addcomp 3 gauss
-6.6 0.01 5. 5. 7. 7. 
-0.5. 0.1 0.1 0.1 3. 3.
-1e-4 1e-6
-/*
-
-fit 100
-
-pl
-
-addcomp 1 gabs
-6.6
-0.01 -0.1
-10.
-/*
-fit 1000
-
-pl
-save all simple_model_state2
-
+        6.30104       0.01          5          5          7          7
+       0.900741       0.05          0          0         10         20
+    0.000508029      1e-06          0          0      1e+20      1e+24
+       0.916251       0.01        0.2        0.2         10         10
+        37.1533        0.1          0          0        100        100
+        3.13148       0.05          1          1          4          4
+            100       -0.1          1          5       1000       1000
+= p50
+              1         -1          0          0          1          1
+              0       -0.1     -0.999     -0.999         10         10
+      0.0180891       0.01          0          0      1e+20      1e+24
+= p1
+= p2
+= p3
+         1.0121       0.01          0          0      1e+10      1e+10
+= p5
+= p6
+= p7
+= p8
+= p9
+= p10
+= p11
+= p12
+= p13
+= p14
+= p15
+= p16
+= p17
+= p18
+= p19
+= p20
+= p21
+= p22
+= p23
+= p24
+= p25
+= p26
+= p27
+= p28
+= p29
+= p30
+= p31
+= p32
+= p33
+= p34
+= p35
+= p36
+= p37
+= p38
+= p39
+= p40
+= p41
+= p42
+= p43
+= p44
+= p45
+= p46
+= p47
+= p48
+= p49
+= p50
+= p51
+= p52
+= p53
+= p54
+= p55
+= p56
+= p57

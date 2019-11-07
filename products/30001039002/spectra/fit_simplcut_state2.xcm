@@ -7,8 +7,10 @@ setplot energy
 
 da state2_A_opt.pha 2:2 state2_B_opt.pha
 ign *:0.-3. 30.-**
+energies 1e-3 1000. 1000 log
 
-mo TBvarabs(diskbb+nthcomp)
+
+mo TBvarabs(diskbb+simplcutx(diskbb))
               1       -0.1          0          0     100000      1e+06
            0.87      -0.01          0          0          1          1
            0.45      -0.01          0          0          1          1
@@ -51,15 +53,15 @@ mo TBvarabs(diskbb+nthcomp)
               1      -0.01          0          0          1          1
               1      -0.01          0          0          1          1
               0      -0.01     -0.999     -0.999         10         10
-            0.6     0.01        0.2         0.2         10.         10.
-            30      0.1         0.          0.          100. 100.
-            2.8     0.05        1.          1.          4.          4. 
-            100. -0.1
-            =43
-            1
-            0. -0.1
-            1e-4
-            /*
+/*
+newpar 43=49
+newpar 44=(1.0-46)*50
+newpar 46 0.1
+newpar 47 -1 
+newpar 48 100. -0.1
+newpar 49 0.7
+newpar 50 50.
+
 
 fit 1000
 addcomp 1 const 
@@ -90,5 +92,5 @@ addcomp 1 gabs
 fit 1000
 
 pl
-save all simple_model_state2
+save all simplcut_model_state2
 
